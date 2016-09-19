@@ -1,0 +1,91 @@
+<h1>User</h1>
+<hr/>
+<div ncy-breadcrumb></div>
+<div ui-view>
+  <div ng-controller="UserCtrl">
+    <tabset vertical="true" type="navType">
+    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active">
+    <form name="userForm">
+      <div  ng-if="tab.code == 'account'">
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Input Label
+              <input type="text" class="form-control" placeholder="name" name="name" ng-model="userFormData.name" required>
+            </label>
+            <small ng-show="!userForm.$pristine && userForm.name.$error.required" class="error">Name is required.</small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-4 columns">
+            <label>Input Label
+              <input type="text" placeholder="large-4.columns" />
+            </label>
+          </div>
+          <div class="large-4 columns">
+            <label>Input Label
+              <input type="text" placeholder="large-4.columns" />
+            </label>
+          </div>
+          <div class="large-4 columns">
+            <div class="row collapse">
+              <label>Input Label</label>
+              <div class="small-9 columns">
+                <input type="text" placeholder="small-9.columns" />
+              </div>
+              <div class="small-3 columns">
+                <span class="postfix">.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Select Box
+              <select>
+                <option value="husker">Husker</option>
+                <option value="starbuck">Starbuck</option>
+                <option value="hotdog">Hot Dog</option>
+                <option value="apollo">Apollo</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-6 columns">
+            <label>Choose Your Favorite</label>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+          </div>
+          <div class="large-6 columns">
+            <label>Check these out</label>
+            <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+            <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <label>Textarea Label
+              <textarea placeholder="small-12.columns"></textarea>
+            </label>
+          </div>
+        </div>
+        <button ng-click="submitUserForm(userFormData)">Send</button>
+      </div>
+    </form>
+    </tab>
+    <!--<tab select="alertMe()">
+    <tab-heading><i class="fa fa-bell"></i> Alert!</tab-heading>I've got an HTML heading, and a select callback. Pretty cool!
+    </tab>-->
+    </tabset>
+    <hr />
+    <div>
+      <input type="file" nv-file-select uploader="uploader"/><br/>
+        <ul>
+            <li ng-repeat="item in uploader.queue">
+                Name: <span ng-bind="item.file.name"></span><br/>
+                <button ng-click="item.upload()">upload</button>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>

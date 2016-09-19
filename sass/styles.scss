@@ -1,0 +1,26 @@
+@import "partials/settings";
+@import "partials/foundation";
+@import "partials/sidebar";
+
+//Import Font Awesome
+$fa-font-path: "../bower_components/components-font-awesome/fonts";
+@import "../public/bower_components/components-font-awesome/scss/font-awesome";
+
+.main-section {
+	padding: 5px 10px;
+	min-height: 800px;
+}
+
+.angular-google-map-container {
+	height: 400px;
+}
+
+/*$dark-color : #333333;
+
+body {
+  background: $dark-color;
+}
+
+h1 {
+    color: #F1F1F1;
+}*/

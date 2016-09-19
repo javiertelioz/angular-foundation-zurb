@@ -1,0 +1,15 @@
+<h1>Orders</h1>
+<hr/>
+<div ncy-breadcrumb></div>
+<div ui-view>
+  <div ng-controller="ButtonsCtrl">
+    Orders Content
+    <ul>
+      <li ng-repeat="x in data">{{x}}</li>
+    </ul>
+
+    <div ng-controller="WithAjaxCtrl as showCase">
+      <table role="grid" datatable="" dt-options="showCase.dtOptions" dt-columns="showCase.dtColumns" class="row-border hover"></table>
+    </div>
+  </div>
+</div>

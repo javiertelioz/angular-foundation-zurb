@@ -1,0 +1,27 @@
+<h1>Dashboard</h1>
+<hr/>
+<div ui-view>
+	Dashboard Content
+	<div ng-controller="DashboardCtrl">
+		<div bar-chart bar-data="data" bar-x='{{xaxis}}' bar-y='yaxis' bar-labels='["Series A", "Series B"]' bar-colors='["#31C0BE", "#c7254e"]' bar-hide-hover="'always'"></div>
+		<div>
+			<div class="form-group">
+				<label for="filename">Filename </label>
+				<input type="text" id="filename" class="form-control" ng-model="filename">
+			</div>
+			<div class="form-group">
+				<label for="separator">Field separator</label>
+				<input type="text" id="separator" class="form-control" ng-model="separator" ng-init="separator=','">
+			</div>
+			<div class="form-group">
+				<label for="decimal-separator">Decimal separator</label>
+				<input type="text" id="decimal-separator" class="form-control" ng-model="decimalSeparator" ng-init="decimalSeparator='.'">
+			</div>
+			<button class="btn btn-default" ng-csv="data" csv-header="getHeader()" filename="{{ filename }}.csv" field-separator="{{separator}}" decimal-separator="{{decimalSeparator}}" >Export to CSV</button>
+		</div>
+
+		<div>
+			<button ng-click="getName()">Get</button>
+		</div>
+	</div>
+</div>

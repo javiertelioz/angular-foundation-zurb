@@ -1,0 +1,23 @@
+$sidebar-width: 114px;
+$nav-color: #333;
+
+
+.left-off-canvas-menu .active, .right-off-canvas-menu .active { 
+	color: lighten($nav-color, 35%) !important;
+	font-weight: bold;
+}
+
+.left-off-canvas-menu{
+	ul.off-canvas-list {
+		li a.item {
+			color:#fff;
+		}
+		&:hover {
+			color: lighten($nav-color, 35%);
+			transition: all .25s ease-in-out;
+		}
+		&:focus {
+			color: $nav-color;
+		}
+	}
+}

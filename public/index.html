@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundation Theme | Angular</title>
+    <link rel="stylesheet" href="./bower_components/datatables.net-scroller-zf/css/scroller.foundation.min.css">
+    <link rel="stylesheet" href="./bower_components/datatables.net-responsive-zf/css/responsive.foundation.min.css">
+    <link rel="stylesheet" href="./bower_components/datatables.net-zf/css/dataTables.foundation.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body ng-app="myApp">
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <nav class="tab-bar">
+          <section class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+          </section>
+          <section class="middle tab-bar-section">
+            <h1 class="title">Foundation</h1>
+          </section>
+          <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+          </section>
+        </nav>
+        <aside class="left-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li>
+              <label ui-sref="dashboard">Dashboard</label>
+            </li>
+            <li>
+              <a ui-sref="orders" ui-sref-active="active"><i class="fi-home"></i> Ordenes</a>
+            </li>
+            <li>
+              <a ui-sref="items" ui-sref-active="active"><i class="fi-home"></i> Items</a>
+            </li>
+            <li>
+              <a ui-sref="questions" ui-sref-active="active"><i class="fi-home"></i> Questions</a>
+            </li>
+            <li>
+              <a ui-sref="stores" ui-sref-active="active"><i class="fi-home"></i> Stores</a>
+            </li>
+          </ul>
+        </aside>
+        <aside class="right-off-canvas-menu">
+          <ul class="off-canvas-list">
+            <li><label ui-sref="user" ui-sref-active="active" >Users</label></li>
+            <li><a href="#">Hari Seldon</a></li>
+            <li class="has-submenu"><a href="#">R. Giskard Reventlov</a></li>
+          </ul>
+        </aside>
+        <section class="main-section">
+          <!-- content goes here -->
+          <div ui-view></div>
+        </section>
+        <a class="exit-off-canvas"></a>
+      </div>
+    </div>
+    <!-- Libs  -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/raphael/raphael.min.js"></script>
+    <script src="/bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="/bower_components/morris.js/morris.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/bower_components/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="/bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/bower_components/datatables.net-responsive-zf/js/responsive.foundation.js"></script>
+    <script src="/bower_components/datatables.net-zf/js/dataTables.foundation.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/angular-breadcrumb/release/angular-breadcrumb.min.js"></script>
+    <script src="/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="/bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
+    <script src="/bower_components/ng-csv/build/ng-csv.min.js"></script>    
+    <script src="/bower_components/angular-lazy-img/release/angular-lazy-img.min.js"></script>
+    <script src="/bower_components/angular-morris/build/module/angular-morris/angular-morris.min.js"></script>
+    <script src="/bower_components/angular-morris/build/module/angular-morris/angular-morris.min.js"></script>
+    <script src="/bower_components/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+    <script src="/bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="/bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
